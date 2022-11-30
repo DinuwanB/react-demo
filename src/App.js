@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Layout, Typography } from "antd";
+import GridListView from "./components/Grid List View/GridListView";
+import SpeedTestPage from "./components/speedtest/SpeedTestPage";
+const { Header, Content } = Layout;
+const { Title } = Typography;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Layout>
+        {/* <Header className="header">
+          <Title
+            level={3}
+            style={{ color: "white", textAlign: "center", marginTop: "15px" }}
+          >
+            React Demo
+          </Title>
+        </Header> */}
+        <Layout style={{ padding: "0 24px 24px", marginTop:100, height: "100vh" }}>
+          <Content>
+            <SpeedTestPage/>
+          </Content>
+        </Layout>
+      </Layout>
+    </>
   );
 }
 
